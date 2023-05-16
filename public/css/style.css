@@ -1,0 +1,576 @@
+/* import kanit */
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* global*/
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Kanit', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--header-text-white);
+  /* might be causing problems */
+}
+
+/* Font Awsome */
+.fa::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 24px;
+}
+
+.fa-solid::before{
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 24px;
+}
+.fa-regular::before{
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 24px;
+}
+/*colors + variables*/
+:root {
+    /* colors */
+    --background-grey: #1E1E1E;
+    --header-grey: #2E2E2E;
+    --header-text-white: #fff;
+    --text-more-grey: #ffffff8c;
+  }
+body {
+    background: var(--background-grey);
+}
+
+.login-logo {
+    width: 500px;
+}
+
+/*                                  login + register (login.php + register.php)*/
+.login-logo-container {
+    font-size: 1rem;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--background-grey);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-input {
+    font-size: 2rem;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #fff;
+    outline: none;
+    color: #fff;
+    padding-right: 3rem;
+    margin-top: 1.5rem;
+    margin-left: 2rem; /* thanks to icon translation in .login-icon-and-input */
+}
+
+.login-button {
+    font-size: 3rem;
+    font-weight: 500;
+    margin-top: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.login-icon-and-input .fa::before, .fa-solid::before{
+    font-size: 2rem;
+    position: relative;
+    right: 2rem;
+}
+
+.login-container p,a {
+    color: var(--text-more-grey);
+}
+
+@media screen and (max-device-width: 420px) {
+    .login-logo {
+        width: 100%;
+    }
+    .login-input {
+        font-size: 1.25rem;
+    }
+  .login-icon-and-input .fa::before, .fa-solid::before{
+        font-size: 1.7rem;
+        right: 1.7rem;
+    }
+}
+
+/*                                              main (main.php)*/
+
+/*                                                   Navbar        */
+
+.nav * {
+    font-size: 16px;
+  }
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.nav-borgir {
+    display: flex;
+    align-items: center;
+}
+
+.nav-borgir img {
+    width: 250px;
+    margin-right: 2rem;
+}
+
+.search-form {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.nav-btn {
+    width: 2.5rem;
+    height: 2.5rem;
+    border: none;
+    background: transparent;
+    outline: none;
+    cursor: pointer;
+    margin-left: 0px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    overflow: hidden;
+}
+
+.nav-btn i{
+    margin-left: 2.2rem;
+}
+
+.nav-links {
+    overflow: hidden;
+    height: 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.show-links {
+    height: 16rem;
+}
+
+.nav-link {
+    color: var(--header-text-white);
+    text-decoration: none;
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    font-weight: 600;
+}
+
+.nav-button {
+    color: var(--header-text-white);
+    letter-spacing: 0.1rem;
+    text-decoration: none;
+    font-size: 2rem;
+    margin-top: 4rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    font-weight: 800;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.nav-button:hover {
+    color: #d1d1d1;
+}
+.search-form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-link:hover {
+    color: #d1d1d1;
+}
+
+.nav-search-input {
+    margin-top: 0.5rem;
+    height: 2.5rem;
+    width: 16rem;
+    border: 2px solid gray;
+    border-radius: 0.25rem;
+    padding: 0 5px 0 5px;
+    border-right: none;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    color: black;
+    outline: none;
+}
+
+.nav-search-button {
+    margin-top: 0.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: transparent;
+    border: 2px solid gray;
+    outline: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    margin-left: 0px;
+    border-left: none;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    overflow: hidden;
+}
+
+.nav-search-button i {
+
+    margin-left: 2.1rem;
+
+}
+  
+@media screen and (min-width: 932px) {
+
+    .nav-center {
+        display: flex;
+        align-items: center;
+    }
+
+    .nav-btn {
+        display: none;
+    }
+
+    .nav-links {
+        height: 3rem;
+        flex-direction: row;
+        align-items: center;
+        
+    }
+
+    .nav-button {
+         margin-top: 0.5rem;
+    }
+}
+/*                                             main                                                         */
+.page {
+    width: 90vw;
+    margin: 0 auto;
+}
+
+.recipes-list {
+    display: grid;
+    gap: 1rem 1rem;
+    padding-bottom: 3rem;
+}
+  
+.recipe {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.recipe-img {
+    display: block;
+    width: 100%;
+    height: 200px; 
+    object-fit: cover; /* optional scaling */
+    border-radius: 10px;
+}
+
+.recipe h5 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 10px;
+    color: white;
+    text-shadow: 2px 2px 4px #000;
+    font-size: 2.5rem;
+    font-weight: 600;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@media screen and (min-width: 420px) {
+    .recipes-list {
+        grid-template-columns: 1fr;
+    }
+}
+  
+@media screen and (min-width: 932px) {
+    .recipes-list {
+        grid-template-columns: 1fr 1fr;
+    }
+  
+}
+  
+@media screen and (min-width: 1320px) {
+    .recipes-list {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+/*                                             footer                                                         */
+
+
+/*                                              recipe (recipe.php + addRecipe.thml)*/
+
+.recipe-page {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.recipe-hero {
+    display: flex;
+    flex-direction: column;
+}
+
+.recipe-hero-img {
+    align-self: center;
+    width:90vw;
+     border-radius: 10px; border-radius: 10px;
+}
+  
+.recipe-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.recipe-info>p {
+    margin: 1rem;
+}
+
+.recipe-info h2 {
+    align-self: center;
+    font-size: 2rem;
+    margin: 0.5rem;
+    font-weight: 500;
+    text-transform: uppercase;
+
+}
+
+.recipe-icons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    max-width: 90vw;
+}
+
+.recipe-icon-and-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.recipe-icon-and-description i{
+    margin-left: 4rem;
+}
+  .recipe-content h4 {
+    text-align: center;
+    font-size: 2rem;
+    text-transform:uppercase;
+    font-weight: 500;
+    margin: 1rem;
+    
+  }
+
+.single-instruction header p {
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+  }
+
+.single-ingredient {
+    padding-bottom: 0.75rem;
+}
+
+@media screen and (min-width: 932px) {
+    .recipe-hero {
+        align-items: center;
+        flex-direction: row;
+        justify-content:space-around;
+    }
+
+    .recipe-content {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+
+    }
+
+    .recipe-info>p {
+        margin: 2rem;
+        max-width: 45vw;
+    }
+    .recipe-hero-img {
+    width:45vw;
+    }
+}
+
+.remove-button {
+    align-self: center;
+    color: var(--header-text-white);
+    text-decoration: none;
+    font-size: 2rem;
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+    font-weight: 800;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.remove-button:hover {
+    color: #d1d1d1;
+}
+
+.recipe-page form {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.add-button {
+    align-self: center;
+    color: var(--header-text-white);
+    text-decoration: none;
+    font-size: 2rem;
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+    font-weight: 800;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.add-button:hover {
+    color: #d1d1d1;
+}
+
+/* add */
+
+.ingredient-list,
+.instruction-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+}
+
+.ingredient-list li input::placeholder,
+.instruction-list li input::placeholder {
+    text-align: center;
+}
+
+.ingredient-list li input,
+.instruction-list li input {
+    width: 90vw;
+    color: black;
+}
+
+
+#prep-time,
+#cook-time,
+#servings {
+    width: 5rem;
+    color: black;
+
+}
+  
+#prep-time::placeholder,
+#cook-time::placeholder,
+#servings::placeholder {
+    text-align: center;
+}
+
+#recipe-title{
+    width: 90vw;
+    height: 3rem;
+    color: black;
+}
+  
+#recipe-title::placeholder {
+    text-align: center;
+}
+
+#recipe-description {
+    width: 90vw;
+    height: 20vh;
+    text-align: center;
+    color: black;
+}
+
+.recipe-image-input {
+    position: relative;
+    width: 90vw;
+    height: 30vh;
+    border: 2px dashed gray;
+    border-radius: 5px;
+  }
+  
+@media screen and (min-width: 932px) {
+
+    #recipe-title{
+        width: 40vw;
+    }
+    
+    #recipe-description {
+        width: 40vw;
+    } 
+
+    .ingredient-list li input,
+    .instruction-list li input {
+        width: 30vw;
+    }
+
+    .recipe-image-input {
+        height: 50vh;
+    }
+}
+
+#add-ingredient-btn,
+#add-instruction-btn {
+    align-self: center;
+    margin-top: 0.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: transparent;
+    border: 2px solid gray;
+    outline: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+}
+
+#add-ingredient-btn i,
+#add-instruction-btn i {
+    margin-left: 2.2rem;
+}
+
+.instructions {
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+}
+
+.ingredients {
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+}

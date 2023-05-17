@@ -41,7 +41,7 @@
                 <input type="file" id="recipe-image" name="recipe_image" accept="image/*" class="recipe-image-input" required>
                 <article class="recipe-info">
                     <h2><input type="text" id="recipe-title" name="recipe_title" placeholder="Recipe title" required></h2>
-                    <p>title
+                    <p>
                         <input type="text" id="recipe-description" name="recipe_description" placeholder="Recipe description" required>
                     </p>
                     <div class="recipe-icons">

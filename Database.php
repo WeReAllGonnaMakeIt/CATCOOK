@@ -4,6 +4,7 @@ require_once 'config.php';
 
 class Database
 {
+    private static $instance;
     private $username;
     private $password;
     private $host;
@@ -15,6 +16,14 @@ class Database
         $this->password = PASSWORD;
         $this->host = HOST;
         $this->database = DATABASE;
+    }
+
+    public static function getInstance()
+    {
+        if (!self::$instance) {
+            self::$instance = new Database();
+        }
+        return self::$instance;
     }
 
     public function connect()

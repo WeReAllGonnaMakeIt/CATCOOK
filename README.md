@@ -1,4 +1,4 @@
-#CATKOOK
+# CATKOOK
 
 ## FUNKCJONALNOŚCI:
 - rejestracja

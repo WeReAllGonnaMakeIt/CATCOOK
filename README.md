@@ -87,6 +87,48 @@ Klasa Database.php zapewnia tylko jedną instancję połączenia z bazą danych,
 Przykładowo, w klasie Database.php zdefiniowana jest statyczna metoda getInstance(), która zwraca instancję klasy Database. Jeśli instancja już istnieje, to jest ona zwracana, w przeciwnym razie tworzona jest nowa instancja.
 
 Dzięki wykorzystaniu wzorca Singleton, można uniknąć tworzenia niepotrzebnych instancji połączenia z bazą danych i zapewnić, że wszystkie komponenty aplikacji korzystają z tego samego połączenia. To z kolei przyczynia się do oszczędności zasobów i utrzymania spójności połączenia w całej aplikacji.
+
+## KOD DO STWORZENIA BAZY
+
+CREATE TABLE users (
+                       usr_id SERIAL PRIMARY KEY,
+                       usr_login VARCHAR(255) NOT NULL,
+                       usr_email VARCHAR(255) NOT NULL,
+                       usr_password VARCHAR(255) NOT NULL,
+                       usr_created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL
+);
+
+CREATE TABLE recipes (
+                         rec_id SERIAL PRIMARY KEY,
+                         usr_id INT REFERENCES users(usr_id) ON UPDATE CASCADE ON DELETE CASCADE NOT NULL,
+                         rec_title VARCHAR(255) NOT NULL,
+                         rec_description TEXT NOT NULL,
+                         rec_prep_time INT NOT NULL,
+                         rec_cook_time INT NOT NULL,
+                         rec_servings INT NOT NULL,
+                         rec_created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL
+);
+
+CREATE TABLE ingredients (
+                             ing_id SERIAL PRIMARY KEY,
+                             rec_id INT REFERENCES recipes(rec_id) ON UPDATE CASCADE ON DELETE CASCADE NOT NULL,
+                             ing_number INT NOT NULL,
+                             ing_text VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE instructions (
+                              ins_id SERIAL PRIMARY KEY,
+                              rec_id INT REFERENCES recipes(rec_id) ON UPDATE CASCADE ON DELETE CASCADE NOT NULL,
+                              ins_number INT NOT NULL,
+                              ins_text TEXT NOT NULL
+);
+
+CREATE TABLE images (
+                        img_id SERIAL PRIMARY KEY,
+                        rec_id INT REFERENCES recipes(rec_id) ON UPDATE CASCADE ON DELETE CASCADE NOT NULL,
+                        img_name VARCHAR(255) NOT NULL
+);
+
 ## PRZYSZŁOŚĆ PROJEKTU:
 - poprawienie czytelności kodu
   - rozbicie widoków na elementy

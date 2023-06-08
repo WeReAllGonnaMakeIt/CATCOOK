@@ -39,7 +39,7 @@
 ### zabezpieczenia:
 ##### Przy próbie wejścia na podstronę bez uprzedniego zalogowania wyświetlany jest widok logowania wraz z komunikatem.
 ![unauthorised](README_PNG/unauthorised.png)
-## UŹYTE WZORCE PROJEKTOWE:
+## UŻYTE WZORCE PROJEKTOWE:
 ### - MVC
 
 W projekcie opartym na wzorcu Model-View-Controller (MVC), modele pełnią kluczową rolę w reprezentowaniu danych aplikacji. Umieszczenie modeli w folderze "src/models" ma na celu wyodrębnienie ich jako oddzielnych komponentów odpowiedzialnych za reprezentację danych i definiowanie struktury informacji.

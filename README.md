@@ -89,7 +89,7 @@ Przykładowo, w klasie Database.php zdefiniowana jest statyczna metoda getInstan
 Dzięki wykorzystaniu wzorca Singleton, można uniknąć tworzenia niepotrzebnych instancji połączenia z bazą danych i zapewnić, że wszystkie komponenty aplikacji korzystają z tego samego połączenia. To z kolei przyczynia się do oszczędności zasobów i utrzymania spójności połączenia w całej aplikacji.
 
 ## KOD DO STWORZENIA BAZY
-
+```
 CREATE TABLE users (
                        usr_id SERIAL PRIMARY KEY,
                        usr_login VARCHAR(255) NOT NULL,
@@ -128,7 +128,7 @@ CREATE TABLE images (
                         rec_id INT REFERENCES recipes(rec_id) ON UPDATE CASCADE ON DELETE CASCADE NOT NULL,
                         img_name VARCHAR(255) NOT NULL
 );
-
+```
 ## PRZYSZŁOŚĆ PROJEKTU:
 - poprawienie czytelności kodu
   - rozbicie widoków na elementy
